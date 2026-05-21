@@ -54,7 +54,7 @@ export default function CountdownTimer() {
   if (isLive) {
     return (
       <div
-        className="text-4xl md:text-6xl font-bold text-cyan-400 animate-pulse"
+        className="text-4xl md:text-6xl font-bold text-cyan-400 animate-pulse text-center"
         data-testid="timer-live-message"
       >
         We are Live!
@@ -64,7 +64,7 @@ export default function CountdownTimer() {
 
   return (
     <div
-      className="flex flex-wrap justify-center gap-4 md:gap-8"
+      className="flex flex-wrap justify-center items-center gap-4 md:gap-8"
       data-testid="countdown-timer"
     >
       <TimeUnit label="Days" value={timeLeft.days} />
@@ -78,7 +78,7 @@ export default function CountdownTimer() {
 function TimeUnit({ label, value }: { label: string; value: number }) {
   return (
     <div
-      className="flex flex-col items-center space-y-2"
+      className="flex flex-col items-center justify-center space-y-2 min-w-[80px]"
       data-testid={`timer-unit-${label.toLowerCase()}`}
     >
       <div
@@ -89,7 +89,7 @@ function TimeUnit({ label, value }: { label: string; value: number }) {
           {value.toString().padStart(2, "0")}
         </span>
       </div>
-      <span className="text-sm md:text-base font-medium text-indigo-200 uppercase tracking-wider">
+      <span className="text-sm md:text-base font-medium text-indigo-200 uppercase tracking-wider text-center">
         {label}
       </span>
     </div>

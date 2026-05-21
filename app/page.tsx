@@ -8,7 +8,7 @@ export default function Home() {
           {/* Hero Section */}
           <section className="space-y-6 animate-fade-in-up">
             <h1
-              className="text-5xl md:text-7xl font-bold tracking-tight"
+              className="text-5xl md:text-7xl font-bold tracking-tight text-center"
               data-testid="hero-heading"
             >
               Something Big is <br className="md:hidden" />
@@ -17,7 +17,7 @@ export default function Home() {
               </span>
             </h1>
             <p
-              className="text-xl md:text-2xl text-indigo-100 max-w-2xl mx-auto"
+              className="text-xl md:text-2xl text-indigo-100 max-w-2xl mx-auto text-center"
               data-testid="hero-subheading"
             >
               We&apos;re working on something amazing that will change the way you
@@ -34,7 +34,10 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-6 text-center text-indigo-200 text-sm">
-        <p data-testid="footer-text">
+        <p
+          className="mx-auto max-w-2xl text-center"
+          data-testid="footer-text"
+        >
           &copy; {new Date().getFullYear()} Your Project. All rights reserved.
         </p>
       </footer>
