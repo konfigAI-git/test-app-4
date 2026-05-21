@@ -1,5 +1,4 @@
 import CountdownTimer from "@/components/CountdownTimer";
-import EmailForm from "@/components/EmailForm";
 
 export default function Home() {
   return (
@@ -29,11 +28,6 @@ export default function Home() {
           {/* Countdown Timer */}
           <section className="py-8" data-testid="countdown-section">
             <CountdownTimer />
-          </section>
-
-          {/* Email Opt-in Form */}
-          <section className="py-8" data-testid="email-form-section">
-            <EmailForm />
           </section>
         </div>
       </main>
